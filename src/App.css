@@ -1,0 +1,65 @@
+/* App.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar & Footer Styles */
+.navbar {
+  background-color: #ffffff;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.footer {
+  background-color: #222;
+  color: #fff;
+  padding: 40px 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-top: auto; /* Pushes footer to bottom if content is short */
+}
+
+/* Container for Logo + Text */
+.brand-container {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.brand-logo {
+  height: 40px;
+  width: auto;
+  /* Removes background if image is transparent */
+  background-color: transparent; 
+}
+
+.company-name {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+/* Text Colors */
+.navbar .company-name { color: #333; }
+.footer .company-name { color: #fff; }
+
+.main-content {
+  min-height: 80vh; /* Ensures space between nav and footer */
+  padding: 50px;
+  text-align: center;
+  background-color: #f4f4f4;
+}
