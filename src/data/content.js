@@ -34,7 +34,7 @@ export const heroSection = {
     { value: "14+", label: "Open Positions" },
     { value: "50+", label: "Team Members" },
     // REMOVED: { value: "100+", label: "Applications Received" },
-    { value: "3+", label: "Years of Excellence" }
+    { value: "1+", label: "Years of Excellence" }
   ]
 };
 
@@ -192,7 +192,7 @@ export const eligibility = {
     title: "Academic Requirements",
     items: [
       "Currently pursuing or completed degree in relevant field",
-      "Strong academic performance (CGPA 6.5+)",
+      "Strong academic performance",
       "Passion for technology and innovation",
       "Good communication skills"
     ]
