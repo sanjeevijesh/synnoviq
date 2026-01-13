@@ -40,14 +40,14 @@ const Support = () => {
       icon: <Users className="w-6 h-6" />,
       title: "Application Support",
       description: "Help with job applications and recruitment process",
-      email: "hr@synnoviq.com",
+      email: "synnoviqtechnologies@gmail.com",
       gradient: "from-blue-500 to-blue-600"
     },
     {
       icon: <Code className="w-6 h-6" />,
       title: "Technical Support",
       description: "Website issues, online assessments, technical problems",
-      email: "tech@synnoviq.com",
+      email: "synnoviqtechnologies@.com",
       gradient: "from-purple-500 to-purple-600"
     },
     {

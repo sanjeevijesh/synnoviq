@@ -67,7 +67,7 @@ const Footer = () => {
           {/* Company Info Column */}
           <div className="space-y-6">
             <div>
-              {/* Updated: Replaced Text with Logo Image */}
+              {/* Logo Image */}
               <img 
                 src={logo} 
                 alt={companyInfo.name} 
@@ -185,37 +185,22 @@ const Footer = () => {
               </li>
 
               <li className="flex items-start gap-3">
-                <div className="p-2 bg-orange-500 bg-opacity-20 rounded-lg">
-                  <Phone className="w-4 h-4 text-orange-400" />
-                </div>
-                <div>
-                  <p className="text-xs text-gray-500 mb-1">Phone</p>
-                  <a
-                    href={`tel:${companyInfo.phone}`}
-                    className="text-gray-300 hover:text-purple-400 transition-colors text-sm"
-                  >
-                    {companyInfo.phone}
-                  </a>
-                </div>
-              </li>
-
-              <li className="flex items-start gap-3">
                 <div className="p-2 bg-green-500 bg-opacity-20 rounded-lg">
                   <MapPin className="w-4 h-4 text-green-400" />
                 </div>
                 <div>
                   <p className="text-xs text-gray-500 mb-1">Location</p>
                   <p className="text-gray-300 text-sm">
-                    {companyInfo.location}
+                    Techpark KRIC National Engineering College, Kovilpatti - 628503
                   </p>
                 </div>
               </li>
             </ul>
 
-            {/* Application CTA */}
+            {/* Application CTA - UPDATED LINK HERE */}
             <div className="mt-6 pt-6 border-t border-white border-opacity-10">
               <a
-                href={companyInfo.applicationForm}
+                href="https://docs.google.com/forms/d/e/1FAIpQLSefapGOeFnKEBFLh05kl5pYcIMru1APKnNOlwUS7DQAbY0gNQ/viewform"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white px-6 py-3 rounded-full font-semibold text-center transition-all duration-300 hover:shadow-lg flex items-center justify-center gap-2"
@@ -234,12 +219,6 @@ const Footer = () => {
               <p>
                 © {currentYear} {companyInfo.name}. All rights reserved.
               </p>
-            </div>
-
-            <div className="flex items-center gap-2">
-              <p>Made with</p>
-              <Heart className="w-4 h-4 text-red-500 animate-pulse" fill="currentColor" />
-              <p>in India</p>
             </div>
 
             <div className="flex items-center gap-4">

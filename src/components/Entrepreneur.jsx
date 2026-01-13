@@ -1,5 +1,5 @@
 import React from 'react';
-import { Lightbulb, TrendingUp, Rocket } from 'lucide-react';
+import { Lightbulb, TrendingUp, Rocket, CheckCircle } from 'lucide-react';
 import { entrepreneurSection, companyInfo } from '../data/content';
 
 const Entrepreneur = () => {
@@ -21,7 +21,7 @@ const Entrepreneur = () => {
         {/* Section Header */}
         <div className="text-center mb-16 text-white scroll-reveal">
           <div className="inline-block bg-white bg-opacity-20 backdrop-blur-sm px-6 py-2 rounded-full mb-6">
-            <span className="font-semibold">{entrepreneurSection.badge}</span>
+            <span className="font-semibold">🚀 Startup Support Program</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             {entrepreneurSection.title}
@@ -67,7 +67,7 @@ const Entrepreneur = () => {
         </div>
 
         {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16 scroll-reveal">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-8 mb-16 scroll-reveal max-w-3xl mx-auto">
           {entrepreneurSection.stats.map((stat, index) => (
             <div key={index} className={`text-center text-white scroll-reveal-delay-${index + 1}`}>
               <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
@@ -82,13 +82,13 @@ const Entrepreneur = () => {
             What We're Looking For
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {entrepreneurSection.looking.map((item, index) => (
+            {entrepreneurSection.lookingFor.items.map((item, index) => (
               <div
                 key={index}
                 className={`flex items-start gap-3 p-4 bg-purple-50 rounded-xl hover:bg-purple-100 transition-colors scroll-reveal-scale scroll-reveal-delay-${(index % 4) + 1}`}
               >
-                <span className="text-2xl flex-shrink-0">{item.split(' ')[0]}</span>
-                <p className="text-gray-700 font-medium">{item.substring(3)}</p>
+                <CheckCircle className="w-5 h-5 text-purple-600 flex-shrink-0 mt-1" />
+                <p className="text-gray-700 font-medium">{item}</p>
               </div>
             ))}
           </div>
@@ -97,7 +97,7 @@ const Entrepreneur = () => {
         {/* CTA */}
         <div className="text-center scroll-reveal">
           <a
-            href={companyInfo.applicationForm}
+            href={companyInfo.formLink}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block bg-orange-500 hover:bg-orange-600 text-white px-10 py-5 rounded-full font-bold text-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"

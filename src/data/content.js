@@ -6,9 +6,8 @@ export const companyInfo = {
   description: "Where Your Ideas Transform Into Reality",
   email: "synnoviqtechnologies@gmail.com",
   phone: "+91 9123565204",
-  location: "Techpark KRIC National Engineering College, Kovilpatti - 628503",
-  website: "https://synnoviq.com",
-  applicationForm: "https://forms.gle/ZwjjH1XfKBgMLg3NA",
+  address: "Techpark KRIC National Engineering College, Kovilpatti - 628503",
+  formLink: "https://forms.gle/ZwjjH1XfKBgMLg3NA",
   social: {
     linkedin: "https://www.linkedin.com/company/synnoviq-technologies",
     instagram: "https://www.instagram.com/synnoviq_technologies/",
@@ -21,65 +20,64 @@ export const navigationLinks = [
   { name: "About", href: "#about" },
   { name: "Positions", href: "#positions" },
   { name: "Entrepreneur", href: "#entrepreneur" },
-  { name: "Apply", href: "#apply" },
   { name: "Contact", href: "#contact" }
 ];
 
 export const heroSection = {
-  badge: "🚀 We're Hiring!",
-  title: "Join the Future of Innovation",
-  subtitle: companyInfo.name,
-  description: companyInfo.tagline,
-  cta1: "View Open Positions",
-  cta2: "Learn More",
+  badge: "🚀 Now Hiring for 14+ Positions",
+  title: "Join India's Most Innovative Tech Company",
+  subtitle: "Building Tomorrow's Innovations Today",
+  description: "We're looking for talented individuals to join our team and shape the future of technology. From internships to full-time roles, find your perfect opportunity.",
+  cta1: { text: "View Open Positions", href: "#positions" },
+  cta2: { text: "Learn More", href: "#about" },
   stats: [
     { value: "14+", label: "Open Positions" },
-    { value: "100+", label: "Applications Received" },
     { value: "50+", label: "Team Members" },
-    { value: "24/7", label: "Support Available" }
+    // REMOVED: { value: "100+", label: "Applications Received" },
+    { value: "3+", label: "Years of Excellence" }
   ]
 };
 
 export const aboutSection = {
   title: "Why Choose Synnoviq?",
-  subtitle: "Be part of something extraordinary. Join a team that's shaping the future of technology.",
+  subtitle: "We're not just a company, we're a launchpad for your career in technology",
   features: [
-    {
-      icon: "🌍",
-      title: "Global Impact",
-      description: "Work on projects that make a difference worldwide. Your code will reach millions of users across the globe."
-    },
-    {
-      icon: "👥",
-      title: "Collaborative Culture",
-      description: "Join a diverse team of talented individuals who support and inspire each other every day."
-    },
-    {
-      icon: "🎯",
-      title: "Career Growth",
-      description: "We invest in your development with mentorship, training, and clear advancement opportunities."
-    },
     {
       icon: "💡",
       title: "Innovation First",
-      description: "Experiment with cutting-edge technologies and bring your creative ideas to life."
-    },
-    {
-      icon: "🏆",
-      title: "Recognition",
-      description: "Your hard work doesn't go unnoticed. We celebrate achievements and reward excellence."
+      description: "Work on cutting-edge projects that push the boundaries of technology and make a real impact."
     },
     {
       icon: "🚀",
-      title: "Fast-Paced Growth",
-      description: "Be part of a rapidly growing company with endless opportunities for professional development."
+      title: "Career Growth",
+      description: "Fast-track your career with mentorship, training, and opportunities to lead projects."
+    },
+    {
+      icon: "🌟",
+      title: "Inclusive Culture",
+      description: "Join a diverse team that values your unique perspective and encourages creativity."
+    },
+    {
+      icon: "🎯",
+      title: "Real Impact",
+      description: "See your work in action as we build solutions that transform businesses and lives."
+    },
+    {
+      icon: "🤝",
+      title: "Collaborative Environment",
+      description: "Work alongside passionate professionals who are always ready to help and share knowledge."
+    },
+    {
+      icon: "📈",
+      title: "Competitive Benefits",
+      description: "Enjoy attractive compensation, flexible work arrangements, and continuous learning opportunities."
     }
   ],
   highlights: {
-    industry: "Technology & Innovation",
-    vision: "Empowering businesses through technology",
-    culture: "Inclusive, Dynamic, Forward-thinking",
-    mission: "Creating solutions that matter"
+    industry: "Software & IT Services",
+    vision: "Leading Innovation in Tech",
+    culture: "Collaborative & Inclusive",
+    mission: "Empowering Through Technology"
   }
 };
 
@@ -91,250 +89,309 @@ export const positionsSection = {
       id: 1,
       title: "Full Stack Developer",
       icon: "💻",
-      description: "Master both frontend and backend development to create complete, scalable web solutions from database to user interface.",
-      skills: ["React", "Node.js", "MongoDB", "APIs", "Git"]
+      description: "Build end-to-end web applications using modern technologies and frameworks.",
+      skills: ["React", "Node.js", "MongoDB", "REST APIs", "Git"]
     },
     {
       id: 2,
       title: "UI/UX Designer",
       icon: "🎨",
-      description: "Design beautiful, intuitive user experiences that delight our users and drive engagement across all platforms.",
+      description: "Create stunning user interfaces and exceptional user experiences for our products.",
       skills: ["Figma", "Adobe XD", "User Research", "Prototyping", "Wireframing"]
     },
     {
       id: 3,
       title: "Data Analyst",
       icon: "📊",
-      description: "Turn data into actionable insights using analytics tools and statistical methods to drive business decisions.",
-      skills: ["Python", "SQL", "Data Visualization", "Statistical Analysis", "Excel"]
+      description: "Transform data into actionable insights that drive business decisions.",
+      skills: ["Python", "SQL", "Excel", "Tableau", "Statistics"]
     },
     {
       id: 4,
       title: "HR Intern",
-      icon: "👔",
-      description: "Support our people operations and help build an amazing workplace culture while learning HR best practices.",
-      skills: ["Communication", "Organization", "Recruitment", "Employee Relations", "MS Office"]
+      icon: "👥",
+      description: "Support our HR team in recruitment, onboarding, and employee engagement.",
+      skills: ["Communication", "MS Office", "Recruitment", "Organization", "People Skills"]
     },
     {
       id: 5,
       title: "Cyber Security",
       icon: "🔒",
-      description: "Protect our systems and data with cutting-edge security practices, threat analysis, and risk management.",
-      skills: ["Network Security", "Penetration Testing", "Encryption", "Security Audits", "Ethical Hacking"]
+      description: "Protect our systems and data from cyber threats and vulnerabilities.",
+      skills: ["Network Security", "Penetration Testing", "Encryption", "Security Audits", "Firewalls"]
     },
     {
       id: 6,
       title: "Network Engineer",
       icon: "🌐",
-      description: "Design, implement, and maintain robust network infrastructure to ensure seamless connectivity and performance.",
-      skills: ["Cisco", "Network Protocols", "Firewalls", "VPN", "Network Security"]
+      description: "Design, implement, and maintain our network infrastructure.",
+      skills: ["Cisco", "Routing", "Switching", "Network Protocols", "Troubleshooting"]
     },
     {
       id: 7,
       title: "3D Modeler",
       icon: "🎭",
-      description: "Create stunning 3D models and visualizations for games, applications, and immersive experiences.",
+      description: "Create stunning 3D models and visualizations for games and applications.",
       skills: ["Blender", "Maya", "3ds Max", "Texturing", "Animation"]
     },
     {
       id: 8,
       title: "Game Developer",
       icon: "🎮",
-      description: "Build immersive gaming experiences using modern game engines and bring creative concepts to life.",
+      description: "Develop engaging games using Unity, Unreal Engine, and modern game technologies.",
       skills: ["Unity", "Unreal Engine", "C#", "3D Graphics", "Game Design"]
     },
     {
       id: 9,
       title: "App Developer",
       icon: "📱",
-      description: "Build powerful mobile applications for iOS and Android platforms that users love and depend on daily.",
+      description: "Build mobile applications for iOS and Android platforms.",
       skills: ["React Native", "Flutter", "iOS", "Android", "Mobile UI"]
     },
     {
       id: 10,
       title: "IoT Engineer",
       icon: "🔌",
-      description: "Design and develop Internet of Things solutions that connect the physical and digital worlds seamlessly.",
+      description: "Design and develop IoT solutions connecting devices to the cloud.",
       skills: ["Arduino", "Raspberry Pi", "Sensors", "Cloud Integration", "Embedded Systems"]
     },
     {
       id: 11,
       title: "Robotics and Automation",
       icon: "🤖",
-      description: "Build intelligent robotic systems and automation solutions that revolutionize manufacturing and everyday life.",
-      skills: ["ROS", "Python", "Mechanical Design", "Control Systems", "AI Integration"]
+      description: "Build intelligent robots and automated systems for various applications.",
+      skills: ["ROS", "Python", "Control Systems", "Machine Learning", "Hardware Integration"]
     },
     {
       id: 12,
       title: "DevOps Engineer",
       icon: "⚙️",
-      description: "Streamline development and operations with CI/CD pipelines, infrastructure automation, and cloud solutions.",
-      skills: ["Docker", "Kubernetes", "AWS", "Jenkins", "Linux"]
+      description: "Streamline development and deployment processes with automation.",
+      skills: ["Docker", "Kubernetes", "CI/CD", "AWS", "Jenkins"]
     },
     {
       id: 13,
       title: "VFX Designer",
       icon: "✨",
-      description: "Create mind-blowing visual effects for films, games, and digital media using industry-leading tools.",
+      description: "Create stunning visual effects for videos, games, and interactive media.",
       skills: ["After Effects", "Nuke", "Houdini", "Compositing", "Motion Graphics"]
     },
     {
       id: 14,
       title: "Graphics Designer",
       icon: "🖌️",
-      description: "Craft compelling visual designs for branding, marketing, and digital media that captivate audiences.",
+      description: "Design eye-catching graphics for digital and print media.",
       skills: ["Photoshop", "Illustrator", "InDesign", "Branding", "Typography"]
     }
-  ],
-  eligibility: {
-    title: "Eligibility Criteria",
-    academic: [
-      "Currently pursuing or completed Bachelor's/Master's degree",
-      "Strong academic record with consistent performance",
-      "Relevant coursework in your field of interest"
-    ],
-    general: [
+  ]
+};
+
+export const eligibility = {
+  title: "Who Can Apply?",
+  academic: {
+    title: "Academic Requirements",
+    items: [
+      "Currently pursuing or completed degree in relevant field",
+      "Strong academic performance (CGPA 6.5+)",
       "Passion for technology and innovation",
-      "Strong problem-solving abilities",
-      "Excellent communication skills",
-      "Team player with a positive attitude",
-      "Willingness to learn and adapt"
+      "Good communication skills"
     ]
   },
-  benefits: [
-    { icon: "💰", title: "Competitive Salary", description: "Industry-standard compensation" },
-    { icon: "🏖️", title: "Flexible Hours", description: "Work-life balance" },
-    { icon: "📚", title: "Learning Budget", description: "Courses & conferences" },
-    { icon: "🏠", title: "Remote Options", description: "Hybrid work model" },
-    { icon: "🎉", title: "Team Events", description: "Regular celebrations" },
-    { icon: "🚀", title: "Career Growth", description: "Fast-track advancement" }
-  ],
-  urgency: {
-    message: "🔥 Limited Spots Available - Apply Now!",
-    note: "We're reviewing applications on a rolling basis. Early applications get priority consideration.",
-    deadline: "Applications close soon!"
+  general: {
+    title: "General Requirements",
+    items: [
+      "Age: 18-28 years",
+      "Available for 3-6 months internship",
+      "Can work from office or hybrid",
+      "Team player with problem-solving mindset"
+    ]
   }
 };
 
+export const benefits = [
+  {
+    icon: "💰",
+    title: "Competitive Salary",
+    description: "Industry-leading compensation packages"
+  },
+  {
+    icon: "🏖️",
+    title: "Flexible Hours",
+    description: "Work-life balance with flexible schedules"
+  },
+  {
+    icon: "📚",
+    title: "Learning Budget",
+    description: "Annual budget for courses and certifications"
+  },
+  {
+    icon: "🏠",
+    title: "Remote Options",
+    description: "Hybrid work model available"
+  },
+  {
+    icon: "🎉",
+    title: "Team Events",
+    description: "Regular team building activities"
+  },
+  {
+    icon: "🚀",
+    title: "Career Growth",
+    description: "Fast-track promotion opportunities"
+  }
+];
+
 export const entrepreneurSection = {
-  title: "For Aspiring Entrepreneurs",
-  subtitle: "Have a groundbreaking idea? We'll help you bring it to life!",
-  badge: "🌟 For Visionaries & Dreamers",
-  description: "Join our entrepreneur program and get the support, mentorship, and resources you need to turn your startup idea into reality.",
+  title: "Entrepreneur Program",
+  subtitle: "Turn Your Startup Dreams Into Reality",
+  description: "We don't just hire employees - we nurture entrepreneurs. Our unique program provides resources, mentorship, and support to help you build your own startup.",
   benefits: [
     {
-      icon: "🎓",
+      icon: "💡",
       title: "Mentorship",
-      description: "Learn from experienced entrepreneurs and industry experts"
+      description: "One-on-one guidance from successful entrepreneurs and industry experts"
     },
     {
       icon: "💰",
       title: "Funding Support",
-      description: "Access to seed funding and investor connections"
+      description: "Help with investor connections and funding strategies"
     },
     {
       icon: "🛠️",
-      title: "Tech Resources",
-      description: "Free access to development tools and infrastructure"
+      title: "Resources",
+      description: "Access to our infrastructure, tools, and technology stack"
     },
     {
       icon: "🤝",
-      title: "Networking",
+      title: "Network",
       description: "Connect with fellow entrepreneurs and potential partners"
     },
     {
-      icon: "📊",
-      title: "Market Research",
-      description: "Get insights and data to validate your business idea"
-    },
-    {
-      icon: "🏢",
-      title: "Co-working Space",
-      description: "Professional workspace to build your startup"
-    },
-    {
       icon: "📈",
-      title: "Business Strategy",
-      description: "Expert guidance on business planning and growth"
+      title: "Business Training",
+      description: "Workshops on business planning, marketing, and operations"
     },
     {
-      icon: "🚀",
-      title: "Launch Support",
-      description: "Help with product launch and go-to-market strategy"
+      icon: "🎯",
+      title: "Market Access",
+      description: "Early customer connections and market validation support"
+    },
+    {
+      icon: "💻",
+      title: "Tech Support",
+      description: "Technical assistance and development resources"
+    },
+    {
+      icon: "🏆",
+      title: "Recognition",
+      description: "Showcase opportunities and startup competitions"
     }
   ],
   features: [
-    { title: "Idea Validation", description: "We'll help assess market fit" },
-    { title: "Growth Strategy", description: "Scale your business effectively" },
-    { title: "Launch Support", description: "Go-to-market execution" }
+    {
+      icon: "🚀",
+      title: "Launch Your Idea",
+      description: "Start working on your startup while being part of our team"
+    },
+    {
+      icon: "📊",
+      title: "Learn by Doing",
+      description: "Gain real-world business experience in a supportive environment"
+    },
+    {
+      icon: "🌟",
+      title: "Success Stories",
+      description: "Join our alumni who have built successful startups"
+    }
   ],
   stats: [
-    { value: "10+", label: "Startups Supported" },
-    { value: "$500K+", label: "Funding Facilitated" },
-    { value: "95%", label: "Success Rate" },
-    { value: "24/7", label: "Mentor Access" }
+    // REMOVED: { value: "10+", label: "Startups Supported" },
+    { value: "2+", label: "Years Running" },
+    // REMOVED: { value: "$500K+", label: "Funding Facilitated" },
+    { value: "20+", label: "Mentors" }
   ],
-  looking: [
-    "🚀 Innovative and scalable business ideas",
-    "💡 Passionate founders with clear vision",
-    "🎯 Problem-solving approach",
-    "📊 Market research and validation",
-    "🤝 Team-building capabilities",
-    "💪 Resilience and determination",
-    "📈 Growth mindset",
-    "🌍 Global thinking, local execution"
-  ]
+  lookingFor: {
+    title: "What We're Looking For",
+    items: [
+      "Innovative business ideas with market potential",
+      "Passionate entrepreneurs ready to commit",
+      "Scalable business models",
+      "Tech-enabled solutions",
+      "Strong team or willingness to build one",
+      "Clear problem-solution fit",
+      "Coachable and open to feedback",
+      "Long-term vision and dedication"
+    ]
+  },
+  cta: {
+    title: "Ready to Build Your Startup?",
+    description: "Apply now and start your entrepreneurial journey with us",
+    buttonText: "Apply for Entrepreneur Program"
+  }
 };
 
 export const applicationSection = {
-  title: "Ready to Apply?",
-  subtitle: "Fill out our application form and take the first step towards an exciting career!",
-  formFields: [
-    "Full Name and Contact Information",
-    "Educational Background and Qualifications",
-    "Position(s) you're interested in",
-    "Resume/CV (PDF format)",
-    "Cover Letter or Statement of Purpose",
-    "Portfolio/GitHub (for technical roles)",
-    "Availability and Start Date"
-  ],
+  title: "How to Apply",
+  subtitle: "Join our team in 3 simple steps",
+  qrCode: {
+    title: "Scan to Apply",
+    description: "Use your phone camera to scan and fill the application form",
+    url: companyInfo.formLink
+  },
+  requirements: {
+    title: "What You'll Need",
+    items: [
+      "Updated resume (PDF format)",
+      "Portfolio/GitHub profile (if applicable)",
+      "Academic transcripts",
+      "Cover letter explaining your interest",
+      "Contact information"
+    ]
+  },
   timeline: [
     {
       phase: "Application Review",
-      description: "Our team reviews your application and resume",
-      duration: "3-5 business days"
+      duration: "3-5 days",
+      description: "We'll review your application and shortlist candidates"
     },
     {
-      phase: "Initial Screening",
-      description: "Phone or video call to discuss your background",
-      duration: "1 week"
+      phase: "Initial Interview",
+      duration: "1 week",
+      description: "Virtual interview with our HR team"
     },
     {
-      phase: "Technical/Skills Assessment",
-      description: "Role-specific evaluation or assignment",
-      duration: "1-2 weeks"
+      phase: "Technical Round",
+      duration: "1 week",
+      description: "Technical assessment and team interaction"
     },
     {
-      phase: "Final Interview & Offer",
-      description: "Meet the team and receive your offer",
-      duration: "1 week"
+      phase: "Final Decision",
+      duration: "2-3 days",
+      description: "Offer letter and onboarding process"
     }
   ],
   warnings: [
-    "⚠️ FALSE INFORMATION: Providing false or misleading information in your application will result in immediate disqualification and may affect future applications.",
-    "⚠️ PLAGIARISM: All submitted work, including cover letters, portfolios, and assignments, must be original. Plagiarized content will lead to automatic rejection.",
-    "⚠️ MULTIPLE APPLICATIONS: Submitting multiple applications for the same position will not increase your chances. One well-crafted application is all we need.",
-    "⚠️ INCOMPLETE APPLICATIONS: Applications missing required documents or information will not be considered. Please ensure all fields are completed.",
-    "⚠️ COMMUNICATION: Only shortlisted candidates will be contacted. If you don't hear from us within 3 weeks, please consider your application unsuccessful for this round."
-  ]
+    "Only shortlisted candidates will be contacted",
+    "Incomplete applications will not be considered",
+    "We do not charge any fee for the application process",
+    "Beware of fraudulent job offers claiming to be from Synnoviq",
+    "All official communication will be from @synnoviq.com email addresses"
+  ],
+  cta: {
+    title: "Questions About the Process?",
+    subtitle: "Reach out to our HR team",
+    email: companyInfo.email,
+    phone: companyInfo.phone
+  }
 };
 
 export const contactSection = {
   title: "Get in Touch",
   subtitle: "Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.",
-  office: {
-    address: companyInfo.location,
-    email: companyInfo.email,
-    phone: companyInfo.phone
-  }
+  formFields: [
+    { name: "name", type: "text", label: "Your Name", required: true },
+    { name: "email", type: "email", label: "Your Email", required: true },
+    { name: "subject", type: "text", label: "Subject", required: true },
+    { name: "message", type: "textarea", label: "Message", required: true }
+  ]
 };

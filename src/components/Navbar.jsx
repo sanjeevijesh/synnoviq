@@ -98,25 +98,15 @@ const Navbar = () => {
               }
             })}
             
-            {isHomePage ? (
-              <a
-                href="#apply"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('#apply');
-                }}
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
-              >
-                Apply Now
-              </a>
-            ) : (
-              <Link
-                to="/#apply"
-                className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
-              >
-                Apply Now
-              </Link>
-            )}
+            {/* UPDATED: Desktop Apply Now Button */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSefapGOeFnKEBFLh05kl5pYcIMru1APKnNOlwUS7DQAbY0gNQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2 rounded-full font-semibold transition-all duration-300 hover:shadow-lg"
+            >
+              Apply Now
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -162,26 +152,16 @@ const Navbar = () => {
               }
             })}
             
-            {isHomePage ? (
-              <a
-                href="#apply"
-                onClick={(e) => {
-                  e.preventDefault();
-                  handleNavClick('#apply');
-                }}
-                className="block mx-4 mt-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-center transition-colors"
-              >
-                Apply Now
-              </a>
-            ) : (
-              <Link
-                to="/#apply"
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="block mx-4 mt-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-center transition-colors"
-              >
-                Apply Now
-              </Link>
-            )}
+            {/* UPDATED: Mobile Apply Now Button */}
+            <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLSefapGOeFnKEBFLh05kl5pYcIMru1APKnNOlwUS7DQAbY0gNQ/viewform"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="block mx-4 mt-2 bg-orange-500 hover:bg-orange-600 text-white px-6 py-3 rounded-full font-semibold text-center transition-colors"
+            >
+              Apply Now
+            </a>
           </div>
         )}
       </div>

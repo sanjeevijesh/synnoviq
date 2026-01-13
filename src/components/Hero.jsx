@@ -1,9 +1,12 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Rocket, ArrowRight, Sparkles } from 'lucide-react';
 import { heroSection } from '../data/content';
 
 const Hero = () => {
   const canvasRef = useRef(null);
+  const [counters, setCounters] = useState([0, 0, 0]);
+  const [hasAnimated, setHasAnimated] = useState(false);
+  const statsRef = useRef(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -86,6 +89,61 @@ const Hero = () => {
     };
   }, []);
 
+  // Counter Animation Effect
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasAnimated) {
+            setHasAnimated(true);
+            animateCounters();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (statsRef.current) {
+      observer.observe(statsRef.current);
+    }
+
+    return () => {
+      if (statsRef.current) {
+        observer.unobserve(statsRef.current);
+      }
+    };
+  }, [hasAnimated]);
+
+  const animateCounters = () => {
+    const targets = heroSection.stats.map(stat => {
+      const numStr = stat.value.replace(/\+/g, '');
+      return parseInt(numStr);
+    });
+
+    const duration = 2000; // 2 seconds
+    const steps = 60;
+    const stepDuration = duration / steps;
+
+    let currentStep = 0;
+
+    const interval = setInterval(() => {
+      currentStep++;
+      const progress = currentStep / steps;
+      
+      setCounters(targets.map(target => 
+        Math.floor(target * easeOutQuad(progress))
+      ));
+
+      if (currentStep >= steps) {
+        clearInterval(interval);
+        setCounters(targets);
+      }
+    }, stepDuration);
+  };
+
+  // Easing function for smooth animation
+  const easeOutQuad = (t) => t * (2 - t);
+
   return (
     <section
       id="home"
@@ -139,22 +197,27 @@ const Hero = () => {
               className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2 group shadow-xl"
             >
               <Rocket className="w-5 h-5" />
-              {heroSection.cta1}
+              {heroSection.cta1.text}
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </a>
             <a
               href="#about"
               className="bg-white text-purple-600 hover:bg-opacity-90 px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 hover:-translate-y-1 flex items-center gap-2"
             >
-              {heroSection.cta2}
+              {heroSection.cta2.text}
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          {/* Stats - Centered with Counter Animation */}
+          <div 
+            ref={statsRef}
+            className="flex justify-center items-center gap-8 md:gap-16 flex-wrap max-w-4xl mx-auto"
+          >
             {heroSection.stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
+                <div className="text-4xl md:text-5xl font-bold mb-2">
+                  {counters[index]}+
+                </div>
                 <div className="text-sm md:text-base opacity-90">{stat.label}</div>
               </div>
             ))}
@@ -163,11 +226,7 @@ const Hero = () => {
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" style={{ zIndex: 10 }}>
-        <div className="w-6 h-10 rounded-full border-2 border-white border-opacity-50 flex items-start justify-center p-2">
-          <div className="w-1.5 h-3 bg-white rounded-full" />
-        </div>
-      </div>
+      
     </section>
   );
 };

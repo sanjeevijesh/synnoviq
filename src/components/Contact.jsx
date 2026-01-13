@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
+import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { contactSection, companyInfo } from '../data/content';
 import emailjs from '@emailjs/browser';
 
@@ -28,9 +28,9 @@ const Contact = () => {
 
     try {
       // EmailJS configuration - YOU NEED TO ADD YOUR KEYS
-      const serviceID = 'service_biidqhj'; // Replace with your EmailJS Service ID
-      const templateID = 'template_11duzkz'; // Replace with your EmailJS Template ID
-      const publicKey = 'SzWU7PRlMqdt8YTQJ'; // Replace with your EmailJS Public Key
+      const serviceID = 'YOUR_SERVICE_ID'; // Replace with your EmailJS Service ID
+      const templateID = 'YOUR_TEMPLATE_ID'; // Replace with your EmailJS Template ID
+      const publicKey = 'YOUR_PUBLIC_KEY'; // Replace with your EmailJS Public Key
 
       // Send email using EmailJS
       const result = await emailjs.send(
@@ -105,27 +105,8 @@ const Contact = () => {
               </div>
             </div>
 
-            {/* Phone Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal-left scroll-reveal-delay-2">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-orange-500 to-orange-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <Phone className="w-6 h-6 text-white" />
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">Call Us</h3>
-                  <a 
-                    href={`tel:${companyInfo.phone}`}
-                    className="text-orange-600 hover:text-orange-700 transition-colors"
-                  >
-                    {companyInfo.phone}
-                  </a>
-                  <p className="text-sm text-gray-500 mt-2">Mon - Fri, 9:00 AM - 6:00 PM IST</p>
-                </div>
-              </div>
-            </div>
-
             {/* Location Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal-left scroll-reveal-delay-3">
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 scroll-reveal-left scroll-reveal-delay-2">
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
                   <MapPin className="w-6 h-6 text-white" />
@@ -140,7 +121,7 @@ const Contact = () => {
             </div>
 
             {/* Enhanced Social Links - Footer Style */}
-            <div className="bg-white rounded-2xl p-8 shadow-lg scroll-reveal-left scroll-reveal-delay-4">
+            <div className="bg-white rounded-2xl p-8 shadow-lg scroll-reveal-left scroll-reveal-delay-3">
               <h3 className="text-xl font-bold text-gray-900 mb-6">Connect With Us</h3>
               
               <div className="flex justify-center gap-4">
@@ -331,24 +312,6 @@ const Contact = () => {
                 By submitting this form, you agree to our Privacy Policy. We'll never share your information.
               </p>
             </form>
-          </div>
-        </div>
-
-        {/* Quick Response Time Box */}
-        <div className="bg-gradient-to-r from-purple-600 to-purple-800 rounded-2xl p-8 text-white text-center scroll-reveal">
-          <h3 className="text-2xl font-bold mb-4">Need Urgent Help?</h3>
-          <p className="text-lg mb-6 opacity-90">
-            Our team is ready to assist you with quick response times
-          </p>
-          <div className="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-3xl font-bold mb-2">{"< 24h"}</p>
-              <p className="text-sm opacity-90">Email Response</p>
-            </div>
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
-              <p className="text-3xl font-bold mb-2">{"< 1h"}</p>
-              <p className="text-sm opacity-90">Phone Support</p>
-            </div>
           </div>
         </div>
 

@@ -47,7 +47,7 @@ const Application = () => {
                 {/* QR Code */}
                 <div className="bg-white p-6 rounded-xl mb-6 flex justify-center">
                   <img 
-                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(companyInfo.applicationForm)}`}
+                    src={`https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(companyInfo.formLink)}`}
                     alt="Application Form QR Code"
                     className="w-48 h-48"
                   />
@@ -59,7 +59,7 @@ const Application = () => {
 
                 {/* Form Link Button */}
                 <a
-                  href={companyInfo.applicationForm}
+                  href={companyInfo.formLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block w-full text-center bg-orange-500 hover:bg-orange-600 text-white px-6 py-4 rounded-full font-bold transition-all duration-300 hover:shadow-xl"
@@ -75,7 +75,7 @@ const Application = () => {
                   What You'll Need
                 </h3>
                 <ul className="space-y-3">
-                  {applicationSection.formFields.map((field, index) => (
+                  {applicationSection.requirements.items.map((field, index) => (
                     <li key={index} className="flex items-start gap-3 opacity-90">
                       <span className="text-orange-400 mt-1">✓</span>
                       <span>{field}</span>
@@ -124,7 +124,7 @@ const Application = () => {
               <AlertTriangle className="w-6 h-6 text-red-300 flex-shrink-0 mt-1" />
               <div>
                 <h3 className="text-2xl font-bold mb-2 text-red-200">
-                  ⚠️ Important Legal Notice
+                   Important Legal Notice
                 </h3>
                 <p className="opacity-95 mb-4">
                   Please read these warnings carefully before applying:
