@@ -1,4 +1,5 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Lightbulb, TrendingUp, Rocket, CheckCircle } from 'lucide-react';
 import { entrepreneurSection, companyInfo } from '../data/content';
 
@@ -11,6 +12,15 @@ const Entrepreneur = () => {
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
       }}
     >
+      <Helmet>
+        {/* UPDATED: Changed title to match the company name globally */}
+        <title>Synnoviq Technologies</title> 
+        <meta 
+          name="description" 
+          content="Join the Synnoviq Entrepreneur Program. We provide technical support, MVP development, and resources for early-stage startups." 
+        />
+      </Helmet>
+
       {/* Background Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute w-96 h-96 bg-white opacity-10 rounded-full -top-48 -right-48 animate-float" />

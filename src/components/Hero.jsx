@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Rocket, ArrowRight, Sparkles } from 'lucide-react';
 import { heroSection } from '../data/content';
 
@@ -152,6 +153,14 @@ const Hero = () => {
         background: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)'
       }}
     >
+      <Helmet>
+        <title>Synnoviq Technologies | Innovative Tech Solutions</title>
+        <meta 
+          name="description" 
+          content="Transform your business with Synnoviq Technologies. We provide cutting-edge web development, mobile apps, and digital solutions." 
+        />
+      </Helmet>
+
       {/* Animated Canvas Particles */}
       <canvas
         ref={canvasRef}

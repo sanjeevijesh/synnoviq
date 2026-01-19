@@ -1,9 +1,18 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { aboutSection } from '../data/content';
 
 const About = () => {
   return (
     <section id="about" className="py-20 bg-gray-50">
+      <Helmet>
+        <title>About Us | Synnoviq Technologies</title>
+        <meta 
+          name="description" 
+          content="Learn about Synnoviq Technologies, our vision, mission, and the innovative culture driving our industry-leading web and mobile solutions." 
+        />
+      </Helmet>
+
       <div className="container mx-auto px-4 max-w-7xl">
         {/* Section Header */}
         <div className="text-center mb-16 scroll-reveal">

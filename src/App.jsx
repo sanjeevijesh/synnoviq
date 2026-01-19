@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async'; // REQUIRED: Makes the tags in Entrepreneur.jsx work
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -83,28 +84,30 @@ function HomePage() {
 
 function App() {
   return (
-    <Router>
-      <ScrollToTop />
-      <div className="App">
-        <Navbar />
-        
-        <Routes>
-          {/* Home page with all sections */}
-          <Route path="/" element={<HomePage />} />
+    <HelmetProvider> {/* This wrapper enables SEO tags in all child components */}
+      <Router>
+        <ScrollToTop />
+        <div className="App">
+          <Navbar />
           
-          {/* Individual pages */}
-          <Route path="/faq" element={<FAQ />} />
-          <Route path="/support" element={<Support />} />
-          <Route path="/privacy" element={<Privacy />} />
-          <Route path="/terms" element={<Terms />} />
-          
-          {/* Redirect old URLs to home */}
-          <Route path="/home" element={<HomePage />} />
-        </Routes>
+          <Routes>
+            {/* Home page with all sections */}
+            <Route path="/" element={<HomePage />} />
+            
+            {/* Individual pages */}
+            <Route path="/faq" element={<FAQ />} />
+            <Route path="/support" element={<Support />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
+            
+            {/* Redirect old URLs to home */}
+            <Route path="/home" element={<HomePage />} />
+          </Routes>
 
-        <Footer />
-      </div>
-    </Router>
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

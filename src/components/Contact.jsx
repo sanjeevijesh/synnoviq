@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, MapPin, Send, CheckCircle, AlertCircle } from 'lucide-react';
 import { contactSection, companyInfo } from '../data/content';
+import { HelmetProvider } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 
 const Contact = () => {
